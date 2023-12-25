@@ -526,7 +526,7 @@ function extractEmails(str) {
  *
  */
 function encodeToRot13(str) {
-  return str.replace(/[a-zA-Z]/g, function (c) {
+  return str.replace(/[a-zA-Z]/g, function func(c) {
     const charCodeShifted = c.charCodeAt(0) + 13;
     return String.fromCharCode(
       (c <= 'Z' ? 90 : 122) >= charCodeShifted
